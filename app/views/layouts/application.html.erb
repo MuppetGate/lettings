@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Lettings</title>
+    <title>Lettings - <%= yield :title %></title>
     <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-    <%= stylesheet_link_tag "http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" %>
-
     <style type='text/css'>
         body {
             background-color: #CCC;
@@ -17,8 +15,19 @@
 
 </head>
 <body>
+<div class="container">
+    <div id='content' class='row-fluid'>
+        <div class='span10 main'>
 
-<%= yield %>
+            <%= yield %>
+
+        </div>
+        <div class='span2 sidebar'>
+            <h3>Sidebar</h3>
+        </div>
+    </div>
+</div>
+
 
 </body>
 </html>
