@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  short_name: MyString
+  short_description: MyText
+  full_description: MyText
+  address: MyText
+  postcode: MyString
+  active: false
+
+two:
+  short_name: MyString
+  short_description: MyText
+  full_description: MyText
+  address: MyText
+  postcode: MyString
+  active: false

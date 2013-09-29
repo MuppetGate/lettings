@@ -1,0 +1,37 @@
+<h1>Listing properties</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Short name</th>
+      <th>Short description</th>
+      <th>Full description</th>
+      <th>Address</th>
+      <th>Postcode</th>
+      <th>Active</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+      <tr>
+        <td><%= property.short_name %></td>
+        <td><%= property.short_description %></td>
+        <td><%= property.full_description %></td>
+        <td><%= property.address %></td>
+        <td><%= property.postcode %></td>
+        <td><%= property.active %></td>
+        <td><%= link_to 'Show', property %></td>
+        <td><%= link_to 'Edit', edit_property_path(property) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Property', new_property_path %>
