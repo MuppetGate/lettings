@@ -6,6 +6,20 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+
+## Also need to create a landlord to own the properties
+
+landlord1 = Landlord.create(short_name: 'TSMITH',
+                            title: 'Mr',
+                            first_name: 'Tony',
+                            initials: 'M A',
+                            surname: 'Smith',
+                            address: '23 Henry Street, Reading',
+                            postcode: 'RG2 3NN',
+                            email_address: 'tmsith1@hotmail.com',
+                            notes: 'Not althogether with it.')
+
+
 Property.create(short_name: 'MaldonClose',
                 short_description: 'Really nice four-bed semi',
 
@@ -23,6 +37,7 @@ Duo Reges: constructio interrete.',
                 address: 'The address will be filled in later on I think',
                 postcode: 'RG32 1QH',
                 active: true,
+                landlord: landlord1
 
 
 )
@@ -44,6 +59,8 @@ Duo Reges: constructio interrete.',
                 address: "The address will be filled in later on I think. It's in Oxford",
                 postcode: 'RG32 1QH',
                 active: true,
-
+                landlord: landlord1
 
 )
+
+
